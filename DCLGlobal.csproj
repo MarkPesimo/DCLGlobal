@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{923C91F7-44E2-4D29-A197-42977AD27970}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DCLGlobal</RootNamespace>
+    <AssemblyName>DCLGlobal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CAL, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ZiPS CAL\CAL.root\CAL\CAL\bin\Debug\CAL.dll</HintPath>
+    </Reference>
+    <Reference Include="CloudToolkitN6">
+      <HintPath>..\..\INSTALLER\CloudToolkitN6.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\13.0.2000.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportSource\13.0.2000.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\13.0.2000.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Windows.Forms\13.0.2000.0__692fbea5521e1304\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADODB">
+      <HintPath>..\..\..\..\..\Shared\Interop.ADODB.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsToolkit">
+      <HintPath>..\..\INSTALLER\WindowsFormsToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ReportControl.cs" />
+    <Compile Include="Classes\ToolsControl.cs" />
+    <Compile Include="Classes\VersionControl.cs" />
+    <Compile Include="Inquiry\AddLoanPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\AddLoanPaymentForm.Designer.cs">
+      <DependentUpon>AddLoanPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\EmployeeMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\EmployeeMonitoring.Designer.cs">
+      <DependentUpon>EmployeeMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\EventAttendeesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\EventAttendeesForm.Designer.cs">
+      <DependentUpon>EventAttendeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\LoanMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\LoanMonitoring.Designer.cs">
+      <DependentUpon>LoanMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\NewLoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\NewLoanForm.Designer.cs">
+      <DependentUpon>NewLoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\PortalUserAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\PortalUserAccountForm.Designer.cs">
+      <DependentUpon>PortalUserAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\SetApproverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\SetApproverForm.Designer.cs">
+      <DependentUpon>SetApproverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\Searchform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\Searchform.designer.cs">
+      <DependentUpon>Searchform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Admin\UserMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Admin\UserMasterform.designer.cs">
+      <DependentUpon>UserMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingAlloteeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingAlloteeControl.Designer.cs">
+      <DependentUpon>AccountingAlloteeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingBDOControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingBDOControl.Designer.cs">
+      <DependentUpon>AccountingBDOControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingLoanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingLoanControl.Designer.cs">
+      <DependentUpon>AccountingLoanControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingPersonnalControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Accounting\AccountingPersonnalControl.Designer.cs">
+      <DependentUpon>AccountingPersonnalControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\DependentsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\DependentsControl.Designer.cs">
+      <DependentUpon>DependentsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EducationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EducationControl.Designer.cs">
+      <DependentUpon>EducationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeAdjustmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeAdjustmentControl.Designer.cs">
+      <DependentUpon>EmployeeAdjustmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeAwardsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeAwardsControl.Designer.cs">
+      <DependentUpon>EmployeeAwardsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeCaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeCaseControl.Designer.cs">
+      <DependentUpon>EmployeeCaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeDocumentControl.Designer.cs">
+      <DependentUpon>EmployeeDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeHierarchyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeHierarchyForm.Designer.cs">
+      <DependentUpon>EmployeeHierarchyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeInfoControl.Designer.cs">
+      <DependentUpon>EmployeeInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeInsuranceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeInsuranceControl.Designer.cs">
+      <DependentUpon>EmployeeInsuranceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLeaveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLeaveControl.Designer.cs">
+      <DependentUpon>EmployeeLeaveControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLicensureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLicensureControl.Designer.cs">
+      <DependentUpon>EmployeeLicensureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLoanInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLoanInfo.Designer.cs">
+      <DependentUpon>EmployeeLoanInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLoanPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeLoanPaymentForm.Designer.cs">
+      <DependentUpon>EmployeeLoanPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeOBTPControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeOBTPControl.Designer.cs">
+      <DependentUpon>EmployeeOBTPControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeOtherDeductionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeOtherDeductionControl.Designer.cs">
+      <DependentUpon>EmployeeOtherDeductionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeOvertimeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeOvertimeControl.Designer.cs">
+      <DependentUpon>EmployeeOvertimeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeePayrollInfocontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeePayrollInfocontrol.Designer.cs">
+      <DependentUpon>EmployeePayrollInfocontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeTrainingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmployeeTrainingControl.Designer.cs">
+      <DependentUpon>EmployeeTrainingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\EmploymentHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\EmploymentHistoryControl.Designer.cs">
+      <DependentUpon>EmploymentHistoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\FamilyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\FamilyControl.Designer.cs">
+      <DependentUpon>FamilyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\LeaveEntitlementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\LeaveEntitlementControl.Designer.cs">
+      <DependentUpon>LeaveEntitlementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\EmployeePayrollAdjustmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\EmployeePayrollAdjustmentControl.Designer.cs">
+      <DependentUpon>EmployeePayrollAdjustmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\EmployeePayrollDeductionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\EmployeePayrollDeductionControl.Designer.cs">
+      <DependentUpon>EmployeePayrollDeductionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\PayrollDetailsInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\PayrollDetailsInformationForm.Designer.cs">
+      <DependentUpon>PayrollDetailsInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\PayrollInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\Payroll\PayrollInfoControl.Designer.cs">
+      <DependentUpon>PayrollInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\PersonalInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\PersonalInfoControl.Designer.cs">
+      <DependentUpon>PersonalInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\TaxWithheldform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\TaxWithheldform.Designer.cs">
+      <DependentUpon>TaxWithheldform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Accounting\BPIInfoform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Accounting\BPIInfoform.Designer.cs">
+      <DependentUpon>BPIInfoform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Accounting\MetroBankform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Accounting\MetroBankform.Designer.cs">
+      <DependentUpon>MetroBankform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\AddonsMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\AddonsMasterform.Designer.cs">
+      <DependentUpon>AddonsMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\AccountMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\AccountMasterform.designer.cs">
+      <DependentUpon>AccountMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\DocumentMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\DocumentMasterform.designer.cs">
+      <DependentUpon>DocumentMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\AwardsMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\AwardsMasterForm.Designer.cs">
+      <DependentUpon>AwardsMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\BranchMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\BranchMasterForm.Designer.cs">
+      <DependentUpon>BranchMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\CompanyMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\CompanyMasterForm.Designer.cs">
+      <DependentUpon>CompanyMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\DepartmentMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\DepartmentMasterForm.Designer.cs">
+      <DependentUpon>DepartmentMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\DocumentMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\DocumentMasterForm.Designer.cs">
+      <DependentUpon>DocumentMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeInfo.Designer.cs">
+      <DependentUpon>EmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeRankMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeRankMasterForm.Designer.cs">
+      <DependentUpon>EmployeeRankMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeShift.Designer.cs">
+      <DependentUpon>EmployeeShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeTypeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EmployeeTypeMasterForm.Designer.cs">
+      <DependentUpon>EmployeeTypeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EventMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\EventMasterForm.Designer.cs">
+      <DependentUpon>EventMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\HolidayMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\HolidayMasterForm.Designer.cs">
+      <DependentUpon>HolidayMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\LeaveTypeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\LeaveTypeMasterForm.Designer.cs">
+      <DependentUpon>LeaveTypeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\MemoMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\MemoMasterForm.Designer.cs">
+      <DependentUpon>MemoMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\OvertimeTypeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\OvertimeTypeMasterForm.Designer.cs">
+      <DependentUpon>OvertimeTypeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\RelationMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\RelationMasterForm.Designer.cs">
+      <DependentUpon>RelationMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\SalaryMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\SalaryMasterForm.Designer.cs">
+      <DependentUpon>SalaryMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\SalaryTypeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\SalaryTypeMasterForm.Designer.cs">
+      <DependentUpon>SalaryTypeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\HRTrainingMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\HRTrainingMasterForm.Designer.cs">
+      <DependentUpon>HRTrainingMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\Employee\ShiftMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\Employee\ShiftMasterForm.Designer.cs">
+      <DependentUpon>ShiftMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\SalaryScaleMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\SalaryScaleMasterform.designer.cs">
+      <DependentUpon>SalaryScaleMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main\TelephoneMasterfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Main\TelephoneMasterfileForm.Designer.cs">
+      <DependentUpon>TelephoneMasterfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payroll\Adjustment_Master_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Payroll\Adjustment_Master_Form.Designer.cs">
+      <DependentUpon>Adjustment_Master_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payroll\Deduction_Master_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Payroll\Deduction_Master_Form.Designer.cs">
+      <DependentUpon>Deduction_Master_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payroll\LoanType_Master_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Payroll\LoanType_Master_Form.Designer.cs">
+      <DependentUpon>LoanType_Master_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payroll\PayrollGroup_Master_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Payroll\PayrollGroup_Master_Form.Designer.cs">
+      <DependentUpon>PayrollGroup_Master_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payroll\Philhealth_Table_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Payroll\Philhealth_Table_Form.Designer.cs">
+      <DependentUpon>Philhealth_Table_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payroll\SSS_Table_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Payroll\SSS_Table_Form.Designer.cs">
+      <DependentUpon>SSS_Table_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payroll\Tax_Table_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Payroll\Tax_Table_Form.Designer.cs">
+      <DependentUpon>Tax_Table_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Employee\GeneralReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Employee\GeneralReportForm.Designer.cs">
+      <DependentUpon>GeneralReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GlobalReportViewerform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GlobalReportViewerform.Designer.cs">
+      <DependentUpon>GlobalReportViewerform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Employee\EmployeeReportViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Employee\EmployeeReportViewerForm.Designer.cs">
+      <DependentUpon>EmployeeReportViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\Aboutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\Aboutform.designer.cs">
+      <DependentUpon>Aboutform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\_Aboutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\_Aboutform.Designer.cs">
+      <DependentUpon>_Aboutform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\AccessMatrixform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\AccessMatrixform.Designer.cs">
+      <DependentUpon>AccessMatrixform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\AlertCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\ChangePasswordform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\ChangePasswordform.Designer.cs">
+      <DependentUpon>ChangePasswordform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\Configureform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\Configureform.designer.cs">
+      <DependentUpon>Configureform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\CrewbookPasswordGeneratorform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\CrewbookPasswordGeneratorform.designer.cs">
+      <DependentUpon>CrewbookPasswordGeneratorform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\Helpform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\Helpform.designer.cs">
+      <DependentUpon>Helpform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\Loginform.designer.cs">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\WhatsNewform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\WhatsNewform.Designer.cs">
+      <DependentUpon>WhatsNewform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Admin\Signatoriesform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Admin\Signatoriesform.designer.cs">
+      <DependentUpon>Signatoriesform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\TimeSheetEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\TimeSheetEmployeeList.designer.cs">
+      <DependentUpon>TimeSheetEmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\TimesheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\TimesheetForm.Designer.cs">
+      <DependentUpon>TimesheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\TimesheetMonitoringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\TimesheetMonitoringForm.Designer.cs">
+      <DependentUpon>TimesheetMonitoringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\Attendanceform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\Attendanceform.Designer.cs">
+      <DependentUpon>Attendanceform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\ManualAttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\ManualAttendanceForm.Designer.cs">
+      <DependentUpon>ManualAttendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Attendance\EmployeeAttandanceform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Attendance\EmployeeAttandanceform.Designer.cs">
+      <DependentUpon>EmployeeAttandanceform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\GenerateCVform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\GenerateCVform.designer.cs">
+      <DependentUpon>GenerateCVform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\ProposedHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\ProposedHistoryControl.designer.cs">
+      <DependentUpon>ProposedHistoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Visitor\VisitorCheckInform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Visitor\VisitorCheckInform.Designer.cs">
+      <DependentUpon>VisitorCheckInform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Inquiry\AddLoanPaymentForm.resx">
+      <DependentUpon>AddLoanPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\EmployeeMonitoring.resx">
+      <DependentUpon>EmployeeMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\EventAttendeesForm.resx">
+      <DependentUpon>EventAttendeesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\LoanMonitoring.resx">
+      <DependentUpon>LoanMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\NewLoanForm.resx">
+      <DependentUpon>NewLoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\PortalUserAccountForm.resx">
+      <DependentUpon>PortalUserAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\SetApproverForm.resx">
+      <DependentUpon>SetApproverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\Searchform.resx">
+      <DependentUpon>Searchform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Admin\UserMasterform.resx">
+      <DependentUpon>UserMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Accounting\AccountingAlloteeControl.resx">
+      <DependentUpon>AccountingAlloteeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Accounting\AccountingBDOControl.resx">
+      <DependentUpon>AccountingBDOControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Accounting\AccountingLoanControl.resx">
+      <DependentUpon>AccountingLoanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Accounting\AccountingPersonnalControl.resx">
+      <DependentUpon>AccountingPersonnalControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\DependentsControl.resx">
+      <DependentUpon>DependentsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EducationControl.resx">
+      <DependentUpon>EducationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeAdjustmentControl.resx">
+      <DependentUpon>EmployeeAdjustmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeAwardsControl.resx">
+      <DependentUpon>EmployeeAwardsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeCaseControl.resx">
+      <DependentUpon>EmployeeCaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeDocumentControl.resx">
+      <DependentUpon>EmployeeDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeHierarchyForm.resx">
+      <DependentUpon>EmployeeHierarchyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeInfoControl.resx">
+      <DependentUpon>EmployeeInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeInsuranceControl.resx">
+      <DependentUpon>EmployeeInsuranceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeLeaveControl.resx">
+      <DependentUpon>EmployeeLeaveControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeLicensureControl.resx">
+      <DependentUpon>EmployeeLicensureControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeLoanInfo.resx">
+      <DependentUpon>EmployeeLoanInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeLoanPaymentForm.resx">
+      <DependentUpon>EmployeeLoanPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeOBTPControl.resx">
+      <DependentUpon>EmployeeOBTPControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeOtherDeductionControl.resx">
+      <DependentUpon>EmployeeOtherDeductionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeOvertimeControl.resx">
+      <DependentUpon>EmployeeOvertimeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeePayrollInfocontrol.resx">
+      <DependentUpon>EmployeePayrollInfocontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmployeeTrainingControl.resx">
+      <DependentUpon>EmployeeTrainingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\EmploymentHistoryControl.resx">
+      <DependentUpon>EmploymentHistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\FamilyControl.resx">
+      <DependentUpon>FamilyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\LeaveEntitlementControl.resx">
+      <DependentUpon>LeaveEntitlementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\Payroll\EmployeePayrollAdjustmentControl.resx">
+      <DependentUpon>EmployeePayrollAdjustmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\Payroll\EmployeePayrollDeductionControl.resx">
+      <DependentUpon>EmployeePayrollDeductionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\Payroll\PayrollDetailsInformationForm.resx">
+      <DependentUpon>PayrollDetailsInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\Payroll\PayrollInfoControl.resx">
+      <DependentUpon>PayrollInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\PersonalInfoControl.resx">
+      <DependentUpon>PersonalInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\TaxWithheldform.resx">
+      <DependentUpon>TaxWithheldform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Accounting\BPIInfoform.resx">
+      <DependentUpon>BPIInfoform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Accounting\MetroBankform.resx">
+      <DependentUpon>MetroBankform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\AddonsMasterform.resx">
+      <DependentUpon>AddonsMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\AccountMasterform.resx">
+      <DependentUpon>AccountMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\DocumentMasterform.resx">
+      <DependentUpon>DocumentMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\AwardsMasterForm.resx">
+      <DependentUpon>AwardsMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\BranchMasterForm.resx">
+      <DependentUpon>BranchMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\CompanyMasterForm.resx">
+      <DependentUpon>CompanyMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\DepartmentMasterForm.resx">
+      <DependentUpon>DepartmentMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\DocumentMasterForm.resx">
+      <DependentUpon>DocumentMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\EmployeeInfo.resx">
+      <DependentUpon>EmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\EmployeeRankMasterForm.resx">
+      <DependentUpon>EmployeeRankMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\EmployeeShift.resx">
+      <DependentUpon>EmployeeShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\EmployeeTypeMasterForm.resx">
+      <DependentUpon>EmployeeTypeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\EventMasterForm.resx">
+      <DependentUpon>EventMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\HolidayMasterForm.resx">
+      <DependentUpon>HolidayMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\LeaveTypeMasterForm.resx">
+      <DependentUpon>LeaveTypeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\MemoMasterForm.resx">
+      <DependentUpon>MemoMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\OvertimeTypeMasterForm.resx">
+      <DependentUpon>OvertimeTypeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\RelationMasterForm.resx">
+      <DependentUpon>RelationMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\SalaryMasterForm.resx">
+      <DependentUpon>SalaryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\SalaryTypeMasterForm.resx">
+      <DependentUpon>SalaryTypeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\HRTrainingMasterForm.resx">
+      <DependentUpon>HRTrainingMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\Employee\ShiftMasterForm.resx">
+      <DependentUpon>ShiftMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\SalaryScaleMasterform.resx">
+      <DependentUpon>SalaryScaleMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Main\TelephoneMasterfileForm.resx">
+      <DependentUpon>TelephoneMasterfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Payroll\Adjustment_Master_Form.resx">
+      <DependentUpon>Adjustment_Master_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Payroll\Deduction_Master_Form.resx">
+      <DependentUpon>Deduction_Master_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Payroll\LoanType_Master_Form.resx">
+      <DependentUpon>LoanType_Master_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Payroll\PayrollGroup_Master_Form.resx">
+      <DependentUpon>PayrollGroup_Master_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Payroll\Philhealth_Table_Form.resx">
+      <DependentUpon>Philhealth_Table_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Payroll\SSS_Table_Form.resx">
+      <DependentUpon>SSS_Table_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Payroll\Tax_Table_Form.resx">
+      <DependentUpon>Tax_Table_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Employee\GeneralReportForm.resx">
+      <DependentUpon>GeneralReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GlobalReportViewerform.resx">
+      <DependentUpon>GlobalReportViewerform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Employee\EmployeeReportViewerForm.resx">
+      <DependentUpon>EmployeeReportViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\Aboutform.resx">
+      <DependentUpon>Aboutform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\_Aboutform.resx">
+      <DependentUpon>_Aboutform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\AccessMatrixform.resx">
+      <DependentUpon>AccessMatrixform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\AlertCustom.resx">
+      <DependentUpon>AlertCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\ChangePasswordform.resx">
+      <DependentUpon>ChangePasswordform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\Configureform.resx">
+      <DependentUpon>Configureform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\CrewbookPasswordGeneratorform.resx">
+      <DependentUpon>CrewbookPasswordGeneratorform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\Loginform.resx">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\WhatsNewform.resx">
+      <DependentUpon>WhatsNewform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Admin\Signatoriesform.resx">
+      <DependentUpon>Signatoriesform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\TimeSheetEmployeeList.resx">
+      <DependentUpon>TimeSheetEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\TimesheetForm.resx">
+      <DependentUpon>TimesheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\TimesheetMonitoringForm.resx">
+      <DependentUpon>TimesheetMonitoringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\Attendanceform.resx">
+      <DependentUpon>Attendanceform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\EmployeeAttandanceform.resx">
+      <DependentUpon>EmployeeAttandanceform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Attendance\ManualAttendanceForm.resx">
+      <DependentUpon>ManualAttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\GenerateCVform.resx">
+      <DependentUpon>GenerateCVform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\ProposedHistoryControl.resx">
+      <DependentUpon>ProposedHistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Visitor\VisitorCheckInform.resx">
+      <DependentUpon>VisitorCheckInform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel-48.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JPG.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerPoint-48.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reader-48.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Word-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save%282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Defualt_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-female-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Check-16.png" />
+    <None Include="Resources\icon_posted.ico" />
+    <None Include="Resources\icon_void.ico" />
+    <None Include="Resources\icon_unposted.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
